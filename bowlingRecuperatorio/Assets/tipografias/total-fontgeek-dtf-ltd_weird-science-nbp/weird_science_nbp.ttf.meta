@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5d8a6afda3ff5774c9a1fa5df0dfc265
+timeCreated: 1499756278
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Weird Science NBP
+  fontNames:
+  - Weird Science NBP
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
