@@ -27,11 +27,12 @@ public class ContadorPinos : MonoBehaviour {
 
 	}
 
-	public void PinosDerribados()
+	public void PinosDerribados(int a)
 	{
-		numeros = numeros + 1;
+		numeros = a + numeros;
+		print ("numeros " +numeros);
 
-		print (numeros);
+
 	}
 
 }

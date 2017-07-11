@@ -8,7 +8,9 @@ public class ResetPinos : MonoBehaviour {
 	private Vector3 PosicionInicialPinos;
 	private Quaternion anguloInicial;
 	private bool AutorizadorReset;
-	private int ContadorTurno = 0;
+	public int ContadorTurno = 0;
+	private Pino points;
+	public Transform AlmacenadoDePinos;
 
 
 
@@ -36,11 +38,13 @@ public class ResetPinos : MonoBehaviour {
 				rb.MovePosition (PosicionInicialPinos);
 				rb.MoveRotation (anguloInicial);
 				AutorizadorReset = false;
+				//points.puntos = 0;
 			}
 			if(rb.angularVelocity != Vector3.zero && transform.position != PosicionInicialPinos)
 			{
-				// mover con un objeto vacio a la pocicion
+				//transform.position = AlmacenadoDePinos.position;
 				print("si");
+
 			}
 		}
 

@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class RessetBola : MonoBehaviour {
 
 	private Rigidbody rb;
 	private Vector3 PosicionInicialBola;
 	private Quaternion anguloInicial;
+	private Quaternion anguloInicialControlador;
+	public Image ControladorDelAngulo;
 
 
 	void Awake () 
@@ -14,7 +18,7 @@ public class RessetBola : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		PosicionInicialBola = transform.position;
 		anguloInicial = transform.rotation;
-
+		anguloInicialControlador = ControladorDelAngulo.transform.rotation;
 
 
 	}
@@ -27,6 +31,7 @@ public class RessetBola : MonoBehaviour {
 			rb.angularVelocity = Vector3.zero;
 			rb.MovePosition (PosicionInicialBola);
 			rb.MoveRotation (anguloInicial);
+			ControladorDelAngulo.transform.rotation = anguloInicialControlador;
 		}
 	}
 }
