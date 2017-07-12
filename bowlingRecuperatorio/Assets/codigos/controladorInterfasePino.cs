@@ -7,27 +7,36 @@ public class controladorInterfasePino : MonoBehaviour {
 
 	public GameObject ControladorDelpino;
 	private bool activador;
-	private Pino puntopino = new Pino();
+	Renderer render;
+	private Rigidbody rb;
+	private ResetPinos rs;
+	Color colr;
 
 	void Start () 
 	{
-		//ControladorDelpino.GetComponent<Renderer> ().
+		rb = GetComponent<Rigidbody> ();
+		rs = GetComponent<ResetPinos> ();
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
-		if (true)
+		if (rb.angularVelocity != Vector3.zero)
 		{
-			Renderer render;
-			Color colr;
 			colr.r = ControladorDelpino.GetComponent<Renderer> ().material.color.r;
 			colr.g = ControladorDelpino.GetComponent<Renderer> ().material.color.g;
 			colr.b = ControladorDelpino.GetComponent<Renderer> ().material.color.b;
-			print ("entra");
+			print ("entra al esto");
 			colr.a = 0f;
-
 			ControladorDelpino.GetComponent<Renderer> ().material.color = colr;
 		}
+
+		if (rs.ContadorTurno%2 == 0 && Input.GetKeyDown(KeyCode.R)) 
+		{
+			colr.a = 1f;
+			ControladorDelpino.GetComponent<Renderer> ().material.color = colr;
+			print ("fuciona");
+		}
+
+
 	}
 }

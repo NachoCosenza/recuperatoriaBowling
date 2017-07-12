@@ -10,7 +10,6 @@ public class Pino : MonoBehaviour {
 	private ContadorPinos lol;
 	public int puntos;
 	public int puntos2;
-	ContadorPinos asad = new ContadorPinos();
 
 	private bool activador;
 
@@ -22,29 +21,13 @@ public class Pino : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.Q)) 
-		{
-			//print ("puntos  "+ PinosDerribados());	
-		}
-
-		if (Input.GetKeyDown (KeyCode.R)) 
-		{
-			puntos = 0;	
-		}
 		
 		if (0 != transform.rotation.y && activador == true)
 		{
 			puntos++;
-			asad.PinosDerribados(1);
+			ContadorPinos.PinosDerribados ();
 			activador = false;
 		}
 	}
 
-	public int PinosDerribados2()
-	{
-		//PinosDerribados ();
-
-		return 0;
-		//muestra los puntos
-	}
 }

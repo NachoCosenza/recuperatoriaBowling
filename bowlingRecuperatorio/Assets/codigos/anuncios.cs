@@ -4,43 +4,31 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class anuncios : MonoBehaviour {
-
-	private Pino anuncio;
-	public int MeDeboAnunciar = 0;
-	public Text uno;
-
-	public Text dos;
-
-	public Text tres;
+	
+	public Text puntos;
+	public GameObject panel;
+	private int contados;
+	private int dies = 10;
 
 
 	void Start () 
 	{
-		
 	}
 	
 	void Update () 
 	{
-		if (anuncio.puntos == 1) 
+		puntos.text = ContadorPinos.numeros.ToString ();
+
+		if (Input.GetKeyDown(KeyCode.R)) 
 		{
-			
-		}
+			contados++;
 
-		if (anuncio.puntos == 2) 
-		{
-			
-		}
+			if (contados >= 2 || puntos.text == dies.ToString())
+			{
+				panel.SetActive(true);
+			}		
 
-		if (anuncio.puntos == 3) 
-		{
-			
-		}
-
-
-
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			
+					
 		}
 
 	}

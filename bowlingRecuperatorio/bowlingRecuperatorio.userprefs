@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\codigos\anuncios.cs">
+    <Files>
+      <File FileName="Assets\codigos\DisparoBola.cs" Line="26" Column="47" />
+      <File FileName="Assets\codigos\RessetBola.cs" Line="1" Column="1" />
+      <File FileName="Assets\codigos\ContadorPinos.cs" Line="11" Column="2" />
+      <File FileName="Assets\codigos\anuncios.cs" Line="26" Column="36" />
+      <File FileName="Assets\codigos\ResetPinos.cs" Line="14" Column="1" />
+      <File FileName="Assets\codigos\Pino.cs" Line="33" Column="1" />
+      <File FileName="Assets\codigos\controladorInterfasePino.cs" Line="21" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

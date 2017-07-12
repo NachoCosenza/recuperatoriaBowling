@@ -12,21 +12,20 @@ public class ResetPinos : MonoBehaviour {
 	private Pino points;
 	public Transform AlmacenadoDePinos;
 
-
-
 	void Awake () 
 	{
 		rb = GetComponent<Rigidbody> ();
+		//rs = GetComponent<Renderer> ();
 		PosicionInicialPinos = transform.position;
 		anguloInicial = transform.rotation;
 		AutorizadorReset = true;
 
+
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
-				
+
 		if (Input.GetKeyUp (KeyCode.R)) 
 		{		
 			ContadorTurno = ContadorTurno + 1;
@@ -42,7 +41,8 @@ public class ResetPinos : MonoBehaviour {
 			}
 			if(rb.angularVelocity != Vector3.zero && transform.position != PosicionInicialPinos)
 			{
-				//transform.position = AlmacenadoDePinos.position;
+				transform.position = AlmacenadoDePinos.position;
+
 				print("si");
 
 			}

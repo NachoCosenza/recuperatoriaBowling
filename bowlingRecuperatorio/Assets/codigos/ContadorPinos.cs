@@ -2,35 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ContadorPinos : MonoBehaviour {
+public class ContadorPinos {
 
 	private Rigidbody rb;
-	private int numeros;
-
-	void Awake() 
-	{
-		rb = GetComponent<Rigidbody>();
-	}
-
-	void Start ()
-	{
-
-	}
+	static public int numeros;
+	public int numero;
 
 
 	void Update ()
 	{ 
-		/*if (rb.angularVelocity != Vector3.zero)
-		{
-			PinosDerribados ();
-		}*/
-
+		numero = numeros;
 	}
 
-	public void PinosDerribados(int a)
+	static public void PinosDerribados()
 	{
-		numeros = a + numeros;
-		print ("numeros " +numeros);
+		numeros++;
+		Debug.Log ("numeros " + numeros);
 
 
 	}
